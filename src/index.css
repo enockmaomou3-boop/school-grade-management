@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy-deep: #0B1E3D;
+  --navy-mid: #132B4D;
+  --navy-light: #1E3A63;
+  --gold: #E8A93B;
+  --gold-soft: #F4E4C1;
+  --paper: #F7F4EC;
+  --ink: #1C1F26;
+  --ink-soft: #5B6472;
+  --green: #3D7A56;
+  --red: #B5443A;
+  --amber: #B08A2E;
+}
+
+* {
+  font-family: 'Work Sans', sans-serif;
+}
+
+.font-display {
+  font-family: 'Fraunces', serif;
+}
+
+.font-mono {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--gold) !important;
+  box-shadow: 0 0 0 3px rgba(232, 169, 59, 0.25);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D8CFAE;
+  border-radius: 8px;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .print-area,
+  .print-area * {
+    visibility: visible;
+  }
+  .print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
